@@ -1,13 +1,35 @@
 import React from "react";
 
-const InputField = ({ id, label, type, IconComponent }) => {
+// types for the props
+interface InputFieldProps {
+  id: string;
+  label: string;
+  type: string;
+  IconComponent: React.ComponentType; 
+  register: any; 
+  error?: { message: string }; 
+}
+
+const InputField: React.FC<InputFieldProps> = ({
+  id,
+  label,
+  type,
+  IconComponent,
+  register,
+  error,
+}) => {
   return (
     <div className="relative w-96">
       <input
         type={type}
         id={id}
         placeholder=" "
-        className="peer w-full border border-blue-300 rounded-lg pl-4 pr-10 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        {...register(id)}
+        className={`peer w-full border ${
+          error ? "border-red-500" : "border-blue-300"
+        } rounded-lg pl-4 pr-10 py-3 focus:outline-none focus:ring-2 ${
+          error ? "focus:ring-red-500" : "focus:ring-blue-500"
+        }`}
       />
       <label
         htmlFor={id}
@@ -18,6 +40,7 @@ const InputField = ({ id, label, type, IconComponent }) => {
       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
         <IconComponent />
       </div>
+      {error && <p className="text-red-500 text-sm mt-1">{error.message}</p>}
     </div>
   );
 };
