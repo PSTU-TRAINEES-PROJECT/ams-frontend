@@ -5,6 +5,7 @@ interface InputFieldProps {
   id: string;
   label: string;
   type: string;
+  placeholder:string;
   IconComponent: React.ComponentType; 
   register: any; 
   error?: { message: string }; 
@@ -14,6 +15,7 @@ const InputField: React.FC<InputFieldProps> = ({
   id,
   label,
   type,
+  placeholder,
   IconComponent,
   register,
   error,
@@ -23,7 +25,7 @@ const InputField: React.FC<InputFieldProps> = ({
       <input
         type={type}
         id={id}
-        placeholder=" "
+        placeholder={placeholder}
         {...register(id)}
         className={`peer w-full border ${
           error ? "border-red-500" : "border-blue-300"
