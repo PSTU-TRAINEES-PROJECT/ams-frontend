@@ -1,7 +1,17 @@
-import React from 'react';
-import Image from 'next/image'; // Assuming you're using Next.js
 
-const CategoryGrid = ({ categories }) => {
+import React from 'react';
+import Image from 'next/image';
+
+interface Category {
+  image: string;
+  name: string;
+}
+
+interface CategoryGridProps {
+  categories: Category[];
+}
+
+const CategoryGrid: React.FC<CategoryGridProps> = ({ categories }) => {
   return (
     <div className="grid grid-cols-3 gap-12 ml-[90px] mr-[90px] mt-[68px]">
       {categories.map((category, index) => (
@@ -12,8 +22,8 @@ const CategoryGrid = ({ categories }) => {
           <Image
             src={category.image}
             alt={category.name}
-            width={60} // Adjust width as needed
-            height={60} // Adjust height as needed
+            width={60}
+            height={60}
             className="mb-2"
           />
           <p>{category.name}</p>
