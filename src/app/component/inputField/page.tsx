@@ -16,7 +16,7 @@ const InputField = ({ id, label, type, IconComponent }) => {
         {label}
       </label>
       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-        <IconComponent className="text-[#9B9292]" />
+        <IconComponent className="text-[#c21616]" />
       </div>
     </div>
   );

@@ -26,13 +26,14 @@ export default function Signup() {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-md">
-        <h2 className="text-4xl font-bold text-center text-blue-600">Signup</h2>
+      <div className="w-full max-w-md m-20 p-8 space-y-6 bg-white shadow-lg rounded-xl">
+        <h2 className="text-2xl font-bold text-center text-primary-400">Signup</h2>
         <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
           <InputField
             id="firstName"
             label="First Name"
             type="text"
+            placeholder="first name"
             register={register}
             error={errors.firstName}
             IconComponent={CiUser}
@@ -41,6 +42,7 @@ export default function Signup() {
             id="lastName"
             label="Last Name"
             type="text"
+            placeholder="last name"
             register={register}
             error={errors.lastName}
             IconComponent={CiUser}
@@ -49,6 +51,7 @@ export default function Signup() {
             id="email"
             label="Email"
             type="email"
+            placeholder="email"
             register={register}
             error={errors.email}
             IconComponent={MdEmail}
@@ -57,6 +60,7 @@ export default function Signup() {
             id="password"
             label="Create Password"
             type="password"
+            placeholder="create password"
             register={register}
             error={errors.password}
             IconComponent={RiLockPasswordLine}
@@ -65,6 +69,7 @@ export default function Signup() {
             id="confirmPassword"
             label="Confirm Password"
             type="password"
+            placeholder="confirm password"
             register={register}
             error={errors.confirmPassword}
             IconComponent={RiLockPasswordLine}
@@ -73,30 +78,30 @@ export default function Signup() {
         </form>
 
         <div className="text-center">
-          <p className="text-xl text-gray-600">
+          <p className="text-sm text-secondary-500">
             Already have an account?{" "}
-            <a href="#" className="text-blue-600 text-xl hover:underline">
+            <a href="/login" className="text-primary-400 font-bold hover:underline">
               Login
             </a>
           </p>
         </div>
 
         <div className="flex items-center justify-center space-x-2">
-          <hr className="w-1/3 border-gray-300" />
-          <span className="text-gray-500">Or</span>
-          <hr className="w-1/3 border-gray-300" />
+          <hr className="w-1/3 border-secondary-500" />
+          <span className="text-secondary-500">Or</span>
+          <hr className="w-1/3 border-secondary-500" />
         </div>
 
         <button
           type="button"
-          className="w-full px-4 py-2 font-thin text-gray-700 bg-white border rounded-md shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="w-full px-4 py-2  text-secondary-500 bg-white border rounded-md shadow-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:bg-primary-400 focus:ring-offset-2"
         >
           <Image
             src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png"
             alt="Google"
             width={500}
             height={200}
-            className="text-xl inline w-5 h-5 mr-2"
+            className="inline w-10 h-10 mr-2"
           />
           Sign in with Google
         </button>

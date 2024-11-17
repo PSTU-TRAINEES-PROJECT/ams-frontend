@@ -20,7 +20,8 @@ export default function EmailSuccess() {
                 <h3 className='text-success-400 text-3xl font-bold mb-3'>Congratulations!</h3>
                 <p className='text-sm text-primary-400 mb-8'>Your account has been verified.</p>
             </div>
-            <Button>Continue to your account</Button>
+            <a href="/"><Button>Continue to your account</Button>
+            </a>
          </div>
       </div>
     );
