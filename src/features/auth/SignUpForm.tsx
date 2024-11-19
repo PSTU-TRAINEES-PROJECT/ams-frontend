@@ -26,7 +26,7 @@ export default function SignUpForm() {
 
   return (
     <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-md">
-      <h2 className="text-2xl font-bold text-center text-blue-600">Signup</h2>
+      <h2 className="text-2xl font-bold text-center text-primary-400">Signup</h2>
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         <InputField
           id="firstName"
@@ -80,7 +80,7 @@ export default function SignUpForm() {
         <p className="text-sm text-secondary-500">
           Already have an account?{" "}
           <a
-            href="/login"
+            href="/sign-in"
             className="text-primary-400 font-bold hover:underline"
           >
             Login
