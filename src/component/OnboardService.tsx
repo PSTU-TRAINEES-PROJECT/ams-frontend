@@ -1,6 +1,6 @@
 "use client";
 
-import { onBoardData } from '../data/onBoardData';
+import { onBoardData } from '../utils/helper/dummy-data/onBoardData';
 import Image from 'next/image';
 import doctor from "../image/doctor.png"
 import { useState } from 'react';
