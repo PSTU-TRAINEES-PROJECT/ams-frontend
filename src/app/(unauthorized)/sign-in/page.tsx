@@ -1,4 +1,4 @@
-import { Logo } from "component/Icons";
+import  Logo  from "../../../icons/Logo";
 import SignInForm from "features/auth/SignInForm";
 import Button from "../../../component/Button";
 import Link from "next/link";

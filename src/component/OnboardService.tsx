@@ -1,8 +1,9 @@
 "use client";
 
+
+import { onBoardData } from 'utils/helper/dummy-data/onBoardData';
 import Image from 'next/image';
 import { useState } from 'react';
-import { onBoardData } from 'utils/helper/dummy-data/onBoardData';
 
 const OnboardService = () => {
   const [doctorOpen, setDoctorOpen] = useState(false);

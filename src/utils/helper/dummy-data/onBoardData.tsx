@@ -20,3 +20,4 @@ export const onBoardData = [
         label: "Others",
     },
 ];
+
