@@ -1,30 +1,23 @@
-import Engineer from "../../../image/Engineer.png"
-import Teacher from "../../../image/Teacher.png"
-import Business from "../../../image/Business.png"
-import publicFig from "../../../image/public.png"
-import other from "../../../image/user.png"
-
-
 export const onBoardData = [
+    {
+        icon: "/images/business.png",
+        label: "Business",
+    },
+    {
+        icon: "/images/engineer.png",
+        label: "Engineer",
+    },
+    {
+        icon: "/images/public_figure.png",
+        label: "Public Figure",
+    },
+    {
+        icon: "/images/teacher.png",
+        label: "Teacher",
+    },
+    {
+        icon: "/images/others.png",
+        label: "Others",
+    },
+];
 
-    {
-        icon: Business,
-        label: "Business"
-    },
-    {
-        icon: Engineer,
-        label: "Engineer"
-    },
-    {
-        icon: publicFig,
-        label: "Public Figure"
-    },
-    {
-        icon: Teacher,
-        label: "Teacher"
-    },
-    {
-        icon: other,
-        label: "Others"
-    },
-]

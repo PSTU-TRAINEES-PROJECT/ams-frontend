@@ -25,7 +25,7 @@ const SignInForm = () => {
 
   return (
     <div className="w-full max-w-md p-8 space-y-6 bg-white shadow-lg rounded-md">
-      <h1 className="text-2xl font-bold text-center text-blue-600">Login</h1>
+      <h1 className="text-2xl font-bold text-center text-primary-400">Login</h1>
 
       <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
         <InputField
@@ -49,7 +49,7 @@ const SignInForm = () => {
         <div className="flex justify-between text-center">
           <a
             href="#"
-            className="hover:underline flex items-center text-sm gap-[1px] text-left text-secondary-500"
+            className="flex items-center text-sm gap-[1px] text-left text-secondary-500"
           >
             <input type="radio" />
             <span> </span>Remember me
@@ -57,7 +57,7 @@ const SignInForm = () => {
           <p>
             <a
               href="#"
-              className="text-right mb-4 text-sm text-primary-400  hover:underline"
+              className="text-right mb-4 text-sm text-primary-400 "
             >
               Forget Password?
             </a>
@@ -68,9 +68,9 @@ const SignInForm = () => {
 
       <div className="text-center">
         <p className="text-sm text-gray-600">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <a
-            href="/signup"
+            href="/sign-up"
             className="text-primary-400 font-bold hover:underline"
           >
             Signup
